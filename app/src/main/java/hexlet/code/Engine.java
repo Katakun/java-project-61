@@ -7,6 +7,7 @@
 * */
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import java.util.Scanner;
 public class Engine {
@@ -20,6 +21,8 @@ public class Engine {
             // Вывод условий игры
             if (gameNumber == 2) {
                 EvenGame.showGameRules();
+            } else if (gameNumber == 3) {
+                CalcGame.showGameRules();
             }
 
             // Цикл вопросов из выбранной игры 3 раза
@@ -28,6 +31,8 @@ public class Engine {
                 System.out.print("Question: ");
                 if (gameNumber == 2) {
                     EvenGame.question();
+                } else if (gameNumber == 3) {
+                    CalcGame.question();
                 }
 
                 // ответ
@@ -37,6 +42,14 @@ public class Engine {
                 // проверка
                 if (gameNumber == 2) {
                     if (EvenGame.isAnswerCorrect(answer)) {
+                        isWin = true;
+                    } else {
+                        System.out.println("Let's try again, " + Cli.userName);
+                        isWin = false;
+                        break;
+                    }
+                } else if (gameNumber == 3) {
+                    if (CalcGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
                         System.out.println("Let's try again, " + Cli.userName);
