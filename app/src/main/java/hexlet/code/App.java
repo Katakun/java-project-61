@@ -8,21 +8,10 @@ public class App {
                 "Please enter the game number and press Enter.\n"
                         + "1 - Greet \n"
                         + "2 - Even \n"
+                        + "3 - Calc \n"
                         + "0 - Exit\n"
                         + "Your choice: ");
         int userChoise = scanner.nextInt();
-        switch (userChoise) {
-            case 1:
-                Cli.helloUser();
-                break;
-            case 2:
-                Cli.helloUser();
-                EvenGame.start();
-                break;
-            case 0:
-                break;
-            default:
-                break;
-        }
+        Engine.startGame(userChoise);
     }
 }
