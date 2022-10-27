@@ -56,50 +56,25 @@ public class Engine {
                 String answer = scanner.next();
 
                 // проверка
-                if (gameNumber == 2) {
-                    if (EvenGame.isAnswerCorrect(answer)) {
-                        isWin = true;
-                    } else {
-                        System.out.println("Let's try again, " + Cli.userName + "!");
-                        isWin = false;
-                        break;
-                    }
-                } else if (gameNumber == 3) {
-                    if (CalcGame.isAnswerCorrect(answer)) {
-                        isWin = true;
-                    } else {
-                        System.out.println("Let's try again, " + Cli.userName + "!");
-                        isWin = false;
-                        break;
-                    }
-                } else if (gameNumber == 4) {
-                    if (GcdGame.isAnswerCorrect(answer)) {
-                        isWin = true;
-                    } else {
-                        System.out.println("Let's try again, " + Cli.userName + "!");
-                        isWin = false;
-                        break;
-                    }
-                } else if (gameNumber == 5) {
-                    if (ProgresGame.isAnswerCorrect(answer)) {
-                        isWin = true;
-                    } else {
-                        System.out.println("Let's try again, " + Cli.userName + "!");
-                        isWin = false;
-                        break;
-                    }
-                } else if (gameNumber == 6) {
-                    if (PrimeGame.isAnswerCorrect(answer)) {
-                        isWin = true;
-                    } else {
-                        System.out.println("Let's try again, " + Cli.userName + "!");
-                        isWin = false;
-                        break;
-                    }
+                if (gameNumber == 2 && EvenGame.isAnswerCorrect(answer)) {
+                    isWin = true;
+                } else if (gameNumber == 3 && CalcGame.isAnswerCorrect(answer)) {
+                    isWin = true;
+                } else if (gameNumber == 4 && GcdGame.isAnswerCorrect(answer)) {
+                    isWin = true;
+                } else if (gameNumber == 5 && ProgresGame.isAnswerCorrect(answer)) {
+                    isWin = true;
+                } else if (gameNumber == 6 && PrimeGame.isAnswerCorrect(answer)) {
+                    isWin = true;
+                } else {
+                    break;
                 }
             }
             if (isWin) {
                 System.out.println("Congratulations, " + Cli.userName + "!");
+            } else {
+                System.out.println("Let's try again, " + Cli.userName + "!");
+                isWin = false;
             }
         }
     }

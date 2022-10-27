@@ -21,7 +21,7 @@ public class ProgresGame {
         int maxLength = 10;
         int length = minLength + (int) (Math.random() * maxLength);
 
-        int hideIndex = 1 + (int) (Math.random() * length);
+        int hideIndex = 0 + (int) (Math.random() * length);
 
         // for start number
         int minSTart = 0;
