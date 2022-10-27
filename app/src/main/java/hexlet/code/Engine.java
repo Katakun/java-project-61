@@ -99,7 +99,7 @@ public class Engine {
                 }
             }
             if (isWin) {
-                System.out.println("Congratulations, " + Cli.userName);
+                System.out.println("Congratulations, " + Cli.userName + "!");
             }
         }
     }
