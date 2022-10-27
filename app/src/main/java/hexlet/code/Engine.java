@@ -7,12 +7,12 @@ import hexlet.code.games.ProgresGame;
 import hexlet.code.games.PrimeGame;
 import java.util.Scanner;
 public class Engine {
-    private static int greetMenuItem = 1;
-    private static int eventMenuItem = 2;
-    private static int calcMenuItem = 3;
-    private static int gcdtMenuItem = 4;
-    private static int progressionMenuItem = 5;
-    private static int primeMenuItem = 6;
+    private static final int greetMenuItem = 1;
+    private static final int eventMenuItem = 2;
+    private static final int calcMenuItem = 3;
+    private static final int gcdtMenuItem = 4;
+    private static final int progressionMenuItem = 5;
+    private static final int primeMenuItem = 6;
 
     private static Scanner scanner = new Scanner(System.in);
     private static boolean isWin = false;

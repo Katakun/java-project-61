@@ -12,13 +12,13 @@ public class CalcGame {
 
     public static void question() {
         // for operation
-        int min = 1;
-        int max = 3;
+        final int min = 1;
+        final int max = 3;
         int randNumForOperation = min + (int) (Math.random() * max);
 
         // numbers
-        int minNum = 1;
-        int maxNum = 10;
+        final int minNum = 1;
+        final int maxNum = 10;
         int num1 = minNum + (int) (Math.random() * maxNum);
         int num2 = minNum + (int) (Math.random() * maxNum);
 

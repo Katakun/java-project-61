@@ -14,8 +14,8 @@ public class GcdGame {
 
     public static void question() {
         // numbers
-        int minNum = 1;
-        int maxNum = 50;
+        final int minNum = 1;
+        final int maxNum = 50;
         num1 = minNum + (int) (Math.random() * maxNum);
         num2 = minNum + (int) (Math.random() * maxNum);
         correctAnswer = gcd(num1, num2);

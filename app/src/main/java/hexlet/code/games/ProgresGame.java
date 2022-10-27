@@ -12,20 +12,20 @@ public class ProgresGame {
 
     public static void question() {
         // for step
-        int minStep = 2;
-        int maxStep = 5;
+        final int minStep = 2;
+        final int maxStep = 5;
         int step = minStep + (int) (Math.random() * maxStep);
 
         // for length progression
-        int minLength = 5;
-        int maxLength = 10;
+        final int minLength = 5;
+        final int maxLength = 10;
         int length = minLength + (int) (Math.random() * maxLength);
 
         int hideIndex = 0 + (int) (Math.random() * length);
 
         // for start number
-        int minSTart = 0;
-        int maxStart = 15;
+        final int minSTart = 0;
+        final int maxStart = 15;
         int startNum = minSTart + (int) (Math.random() * maxStart);
 
         int num = startNum;
