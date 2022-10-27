@@ -60,7 +60,7 @@ public class Engine {
                     if (EvenGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
-                        System.out.println("Let's try again, " + Cli.userName);
+                        System.out.println("Let's try again, " + Cli.userName + "!");
                         isWin = false;
                         break;
                     }
@@ -68,7 +68,7 @@ public class Engine {
                     if (CalcGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
-                        System.out.println("Let's try again, " + Cli.userName);
+                        System.out.println("Let's try again, " + Cli.userName + "!");
                         isWin = false;
                         break;
                     }
@@ -76,7 +76,7 @@ public class Engine {
                     if (GcdGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
-                        System.out.println("Let's try again, " + Cli.userName);
+                        System.out.println("Let's try again, " + Cli.userName + "!");
                         isWin = false;
                         break;
                     }
@@ -84,7 +84,7 @@ public class Engine {
                     if (ProgresGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
-                        System.out.println("Let's try again, " + Cli.userName);
+                        System.out.println("Let's try again, " + Cli.userName + "!");
                         isWin = false;
                         break;
                     }
