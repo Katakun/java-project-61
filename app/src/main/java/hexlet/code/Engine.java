@@ -5,7 +5,6 @@ import hexlet.code.games.CalcGame;
 import hexlet.code.games.GcdGame;
 import hexlet.code.games.ProgresGame;
 import hexlet.code.games.PrimeGame;
-
 import java.util.Scanner;
 public class Engine {
     private static int greetMenuItem = 1;

@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 public class ProgresGame {
-    public static int correctAnswer;
+    private static int correctAnswer;
 
     public static void showGameRules() {
         Cli.helloUser();
