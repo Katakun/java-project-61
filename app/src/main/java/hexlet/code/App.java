@@ -10,6 +10,7 @@ public class App {
                         + "2 - Even \n"
                         + "3 - Calc \n"
                         + "4 - GDC \n"
+                        + "5 - Progression \n"
                         + "0 - Exit\n"
                         + "Your choice: ");
         int userChoise = scanner.nextInt();
