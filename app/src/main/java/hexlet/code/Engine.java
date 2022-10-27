@@ -7,10 +7,7 @@
 * */
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.ProgresGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 public class Engine {
@@ -30,6 +27,8 @@ public class Engine {
                 GCDGame.showGameRules();
             } else if (gameNumber == 5) {
                 ProgresGame.showGameRules();
+            } else if (gameNumber == 6) {
+                PrimeGame.showGameRules();
             }
 
             // Цикл вопросов из выбранной игры 3 раза
@@ -44,6 +43,8 @@ public class Engine {
                     GCDGame.question();
                 } else if (gameNumber == 5) {
                     ProgresGame.question();
+                } else if (gameNumber == 6) {
+                    PrimeGame.question();
                 }
 
                 // ответ
@@ -77,6 +78,14 @@ public class Engine {
                     }
                 } else if (gameNumber == 5) {
                     if (ProgresGame.isAnswerCorrect(answer)) {
+                        isWin = true;
+                    } else {
+                        System.out.println("Let's try again, " + Cli.userName);
+                        isWin = false;
+                        break;
+                    }
+                } else if (gameNumber == 6) {
+                    if (PrimeGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
                         System.out.println("Let's try again, " + Cli.userName);
