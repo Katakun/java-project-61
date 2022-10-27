@@ -2,9 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
-import java.util.Arrays;
-
-public class GCDGame {
+public class GcdGame {
     public static int correctAnswer;
     private static int num1;
     private static int num2;
@@ -16,10 +14,11 @@ public class GCDGame {
 
     public static void question() {
         // numbers
-        int minNum = 1, maxNum = 50;
+        int minNum = 1;
+        int maxNum = 50;
         num1 = minNum + (int) (Math.random() * maxNum);
         num2 = minNum + (int) (Math.random() * maxNum);
-        correctAnswer = GCD(num1, num2);
+        correctAnswer = gcd(num1, num2);
         System.out.println(num1 + " " + num2);
     }
 
@@ -36,10 +35,10 @@ public class GCDGame {
         }
     }
 
-    private static int GCD(int num1, int num2) {
+    private static int gcd(int n1, int n2) {
         int gcd = 1;
-        for (int i = 1; i <= num1 && i <= num2; i++) {
-            if (num1 % i == 0 && num2 % i == 0) {
+        for (int i = 1; i <= n1 && i <= n2; i++) {
+            if (n1 % i == 0 && n2 % i == 0) {
                 gcd = i;
             }
         }

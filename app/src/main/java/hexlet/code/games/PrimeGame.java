@@ -11,7 +11,8 @@ public class PrimeGame {
     }
 
     public static void question() {
-        int min = 1, max = 50;
+        int min = 1;
+        int max = 50;
         questNumber = min + (int) (Math.random() * ((max - min) + 1));
         System.out.println(questNumber);
     }
@@ -31,7 +32,7 @@ public class PrimeGame {
     }
 
     private static boolean isPrime(int number) {
-        for (int i = 2; i < number/2; i++) {
+        for (int i = 2; i < number / 2; i++) {
             if (number % i == 0) {
                 return false;
             }

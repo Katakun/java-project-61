@@ -9,7 +9,8 @@ public class EvenGame {
     }
 
     public static void question() {
-        int min = 0, max = 50;
+        int min = 0;
+        int max = 50;
         questNumber = min + (int) (Math.random() * ((max - min) + 1));
         System.out.println(questNumber);
     }

@@ -7,7 +7,11 @@
 * */
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.GcdGame;
+import hexlet.code.games.ProgresGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 public class Engine {
@@ -24,7 +28,7 @@ public class Engine {
             } else if (gameNumber == 3) {
                 CalcGame.showGameRules();
             } else if (gameNumber == 4) {
-                GCDGame.showGameRules();
+                GcdGame.showGameRules();
             } else if (gameNumber == 5) {
                 ProgresGame.showGameRules();
             } else if (gameNumber == 6) {
@@ -40,7 +44,7 @@ public class Engine {
                 } else if (gameNumber == 3) {
                     CalcGame.question();
                 } else if (gameNumber == 4) {
-                    GCDGame.question();
+                    GcdGame.question();
                 } else if (gameNumber == 5) {
                     ProgresGame.question();
                 } else if (gameNumber == 6) {
@@ -69,7 +73,7 @@ public class Engine {
                         break;
                     }
                 } else if (gameNumber == 4) {
-                    if (GCDGame.isAnswerCorrect(answer)) {
+                    if (GcdGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
                         System.out.println("Let's try again, " + Cli.userName);
