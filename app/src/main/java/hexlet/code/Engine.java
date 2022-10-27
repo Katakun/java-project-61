@@ -9,6 +9,8 @@ package hexlet.code;
 
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
+
 import java.util.Scanner;
 public class Engine {
     private static Scanner scanner = new Scanner(System.in);
@@ -23,6 +25,8 @@ public class Engine {
                 EvenGame.showGameRules();
             } else if (gameNumber == 3) {
                 CalcGame.showGameRules();
+            } else if (gameNumber == 4) {
+                GCDGame.showGameRules();
             }
 
             // Цикл вопросов из выбранной игры 3 раза
@@ -33,6 +37,8 @@ public class Engine {
                     EvenGame.question();
                 } else if (gameNumber == 3) {
                     CalcGame.question();
+                } else if (gameNumber == 4) {
+                    GCDGame.question();
                 }
 
                 // ответ
@@ -50,6 +56,14 @@ public class Engine {
                     }
                 } else if (gameNumber == 3) {
                     if (CalcGame.isAnswerCorrect(answer)) {
+                        isWin = true;
+                    } else {
+                        System.out.println("Let's try again, " + Cli.userName);
+                        isWin = false;
+                        break;
+                    }
+                } else if (gameNumber == 4) {
+                    if (GCDGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
                         System.out.println("Let's try again, " + Cli.userName);
