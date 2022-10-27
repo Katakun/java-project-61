@@ -21,7 +21,7 @@ public class Engine {
         // Приветсвие
         if (gameNumber == 1) {
             Cli.helloUser();
-        } else {
+        } else if (gameNumber != 0){
             // Вывод условий игры
             if (gameNumber == 2) {
                 EvenGame.showGameRules();
@@ -67,6 +67,7 @@ public class Engine {
                 } else if (gameNumber == 6 && PrimeGame.isAnswerCorrect(answer)) {
                     isWin = true;
                 } else {
+                    isWin = false;
                     break;
                 }
             }
