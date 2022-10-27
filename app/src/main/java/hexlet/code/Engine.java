@@ -7,30 +7,30 @@ import hexlet.code.games.ProgresGame;
 import hexlet.code.games.PrimeGame;
 import java.util.Scanner;
 public class Engine {
-    private static final int greetMenuItem = 1;
-    private static final int eventMenuItem = 2;
-    private static final int calcMenuItem = 3;
-    private static final int gcdtMenuItem = 4;
-    private static final int progressionMenuItem = 5;
-    private static final int primeMenuItem = 6;
+    private static final int GREET_MENU_ITEM = 1;
+    private static final int EVEN_MENU_ITEM = 2;
+    private static final int CALC_MENU_ITEM = 3;
+    private static final int GCD_MENU_ITEM = 4;
+    private static final int PROGRESSION_MENU_ITEM = 5;
+    private static final int PRIME_MENU_ITEM = 6;
 
     private static Scanner scanner = new Scanner(System.in);
     private static boolean isWin = false;
     public static void startGame(int gameNumber) {
         // Приветсвие
-        if (gameNumber == greetMenuItem) {
+        if (gameNumber == GREET_MENU_ITEM) {
             Cli.helloUser();
         } else if (gameNumber != 0) {
             // Вывод условий игры
-            if (gameNumber == eventMenuItem) {
+            if (gameNumber == EVEN_MENU_ITEM) {
                 EvenGame.showGameRules();
-            } else if (gameNumber == calcMenuItem) {
+            } else if (gameNumber == CALC_MENU_ITEM) {
                 CalcGame.showGameRules();
-            } else if (gameNumber == gcdtMenuItem) {
+            } else if (gameNumber == GCD_MENU_ITEM) {
                 GcdGame.showGameRules();
-            } else if (gameNumber == progressionMenuItem) {
+            } else if (gameNumber == PROGRESSION_MENU_ITEM) {
                 ProgresGame.showGameRules();
-            } else if (gameNumber == primeMenuItem) {
+            } else if (gameNumber == PRIME_MENU_ITEM) {
                 PrimeGame.showGameRules();
             }
 
@@ -38,15 +38,15 @@ public class Engine {
             for (int i = 0; i < 3; i++) {
                 // вопрос
                 System.out.print("Question: ");
-                if (gameNumber == eventMenuItem) {
+                if (gameNumber == EVEN_MENU_ITEM) {
                     EvenGame.question();
-                } else if (gameNumber == calcMenuItem) {
+                } else if (gameNumber == CALC_MENU_ITEM) {
                     CalcGame.question();
-                } else if (gameNumber == gcdtMenuItem) {
+                } else if (gameNumber == GCD_MENU_ITEM) {
                     GcdGame.question();
-                } else if (gameNumber == progressionMenuItem) {
+                } else if (gameNumber == PROGRESSION_MENU_ITEM) {
                     ProgresGame.question();
-                } else if (gameNumber == primeMenuItem) {
+                } else if (gameNumber == PRIME_MENU_ITEM) {
                     PrimeGame.question();
                 }
 
@@ -55,15 +55,15 @@ public class Engine {
                 String answer = scanner.next();
 
                 // проверка
-                if (gameNumber == eventMenuItem && EvenGame.isAnswerCorrect(answer)) {
+                if (gameNumber == EVEN_MENU_ITEM && EvenGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == calcMenuItem && CalcGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == CALC_MENU_ITEM && CalcGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == gcdtMenuItem && GcdGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == GCD_MENU_ITEM && GcdGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == progressionMenuItem && ProgresGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == PROGRESSION_MENU_ITEM && ProgresGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == primeMenuItem && PrimeGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == PRIME_MENU_ITEM && PrimeGame.isAnswerCorrect(answer)) {
                     isWin = true;
                 } else {
                     isWin = false;
