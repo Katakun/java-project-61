@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 public class EvenGame {
-    public static int questNumber;
+    private static int questNumber;
     public static void showGameRules() {
         Cli.helloUser();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");

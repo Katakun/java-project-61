@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 public class PrimeGame {
-    public static int questNumber;
+    private static int questNumber;
 
     public static void showGameRules() {
         Cli.helloUser();

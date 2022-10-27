@@ -1,10 +1,3 @@
-/*
-* Требования к проекту
-В проекте нет необходимости использовать абстрактные классы,
-* интерфейсы, наследование, инстансы классов. Поставленные
-* задачи легко решаются без них, используйте статические методы
-* и свойства.
-* */
 package hexlet.code;
 
 import hexlet.code.games.EvenGame;
@@ -15,23 +8,30 @@ import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 public class Engine {
+    private static int greetMenuItem = 1;
+    private static int eventMenuItem = 2;
+    private static int calcMenuItem = 3;
+    private static int gcdtMenuItem = 4;
+    private static int progressionMenuItem = 5;
+    private static int primeMenuItem = 6;
+
     private static Scanner scanner = new Scanner(System.in);
     private static boolean isWin = false;
     public static void startGame(int gameNumber) {
         // Приветсвие
-        if (gameNumber == 1) {
+        if (gameNumber == greetMenuItem) {
             Cli.helloUser();
-        } else if (gameNumber != 0){
+        } else if (gameNumber != 0) {
             // Вывод условий игры
-            if (gameNumber == 2) {
+            if (gameNumber == eventMenuItem) {
                 EvenGame.showGameRules();
-            } else if (gameNumber == 3) {
+            } else if (gameNumber == calcMenuItem) {
                 CalcGame.showGameRules();
-            } else if (gameNumber == 4) {
+            } else if (gameNumber == gcdtMenuItem) {
                 GcdGame.showGameRules();
-            } else if (gameNumber == 5) {
+            } else if (gameNumber == progressionMenuItem) {
                 ProgresGame.showGameRules();
-            } else if (gameNumber == 6) {
+            } else if (gameNumber == primeMenuItem) {
                 PrimeGame.showGameRules();
             }
 
@@ -39,15 +39,15 @@ public class Engine {
             for (int i = 0; i < 3; i++) {
                 // вопрос
                 System.out.print("Question: ");
-                if (gameNumber == 2) {
+                if (gameNumber == eventMenuItem) {
                     EvenGame.question();
-                } else if (gameNumber == 3) {
+                } else if (gameNumber == calcMenuItem) {
                     CalcGame.question();
-                } else if (gameNumber == 4) {
+                } else if (gameNumber == gcdtMenuItem) {
                     GcdGame.question();
-                } else if (gameNumber == 5) {
+                } else if (gameNumber == progressionMenuItem) {
                     ProgresGame.question();
-                } else if (gameNumber == 6) {
+                } else if (gameNumber == primeMenuItem) {
                     PrimeGame.question();
                 }
 
@@ -56,15 +56,15 @@ public class Engine {
                 String answer = scanner.next();
 
                 // проверка
-                if (gameNumber == 2 && EvenGame.isAnswerCorrect(answer)) {
+                if (gameNumber == eventMenuItem && EvenGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == 3 && CalcGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == calcMenuItem && CalcGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == 4 && GcdGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == gcdtMenuItem && GcdGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == 5 && ProgresGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == progressionMenuItem && ProgresGame.isAnswerCorrect(answer)) {
                     isWin = true;
-                } else if (gameNumber == 6 && PrimeGame.isAnswerCorrect(answer)) {
+                } else if (gameNumber == primeMenuItem && PrimeGame.isAnswerCorrect(answer)) {
                     isWin = true;
                 } else {
                     isWin = false;
@@ -72,9 +72,9 @@ public class Engine {
                 }
             }
             if (isWin) {
-                System.out.println("Congratulations, " + Cli.userName + "!");
+                System.out.println("Congratulations, " + Cli.getUserName() + "!");
             } else {
-                System.out.println("Let's try again, " + Cli.userName + "!");
+                System.out.println("Let's try again, " + Cli.getUserName() + "!");
                 isWin = false;
             }
         }
