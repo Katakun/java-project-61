@@ -92,7 +92,7 @@ public class Engine {
                     if (PrimeGame.isAnswerCorrect(answer)) {
                         isWin = true;
                     } else {
-                        System.out.println("Let's try again, " + Cli.userName);
+                        System.out.println("Let's try again, " + Cli.userName + "!");
                         isWin = false;
                         break;
                     }
