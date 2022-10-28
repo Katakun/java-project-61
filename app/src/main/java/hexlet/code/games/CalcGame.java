@@ -4,6 +4,10 @@ import hexlet.code.Cli;
 
 public class CalcGame {
     private static int correctAnswer;
+    private static final int MIN_CALC_OPERATOR = 1;
+    private static final int MAX_CALC_OPERATOR = 3;
+    private static final int MIN_CALC_OPERAND = 1;
+    private static final int MAX_CALC_OPERAND = 10;
 
     public static void showGameRules() {
         Cli.helloUser();
@@ -12,16 +16,11 @@ public class CalcGame {
 
     public static void question() {
         // for operation
-        final int MIN = 1;
-        final int MAX = 3;
-        int randNumForOperation = MIN + (int) (Math.random() * MAX);
-
+        int randNumForOperation = MIN_CALC_OPERATOR + (int) (Math.random() * MAX_CALC_OPERATOR);
         // numbers
-        final int minNum = 1;
-        final int maxNum = 10;
-        int num1 = minNum + (int) (Math.random() * maxNum);
-        int num2 = minNum + (int) (Math.random() * maxNum);
-
+        int num1 = MIN_CALC_OPERAND + (int) (Math.random() * MAX_CALC_OPERAND);
+        int num2 = MIN_CALC_OPERAND + (int) (Math.random() * MAX_CALC_OPERAND);
+        // calculator question
         switch (randNumForOperation) {
             case 1:
                 correctAnswer = num1 + num2;
