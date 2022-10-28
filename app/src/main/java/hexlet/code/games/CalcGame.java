@@ -20,6 +20,7 @@ public class CalcGame {
         // numbers
         int num1 = MIN_CALC_OPERAND + (int) (Math.random() * MAX_CALC_OPERAND);
         int num2 = MIN_CALC_OPERAND + (int) (Math.random() * MAX_CALC_OPERAND);
+
         // calculator question
         switch (randNumForOperation) {
             case 1:
@@ -30,11 +31,9 @@ public class CalcGame {
                 correctAnswer = num1 - num2;
                 System.out.println(num1 + " - " + num2);
                 break;
-            case 3:
+            default:
                 correctAnswer = num1 * num2;
                 System.out.println(num1 + " * " + num2);
-                break;
-            default:
                 break;
         }
     }
