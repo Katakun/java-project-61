@@ -14,6 +14,8 @@ public class Engine {
     private static final int PROGRESSION_MENU_ITEM = 5;
     private static final int PRIME_MENU_ITEM = 6;
 
+    private static final int QUESTION_COUNT = 3;
+
     private static Scanner scanner = new Scanner(System.in);
     private static boolean isWin = false;
     public static void startGame(int gameNumber) {
@@ -35,7 +37,7 @@ public class Engine {
             }
 
             // Цикл вопросов из выбранной игры 3 раза
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < QUESTION_COUNT; i++) {
                 // вопрос
                 System.out.print("Question: ");
                 if (gameNumber == EVEN_MENU_ITEM) {
